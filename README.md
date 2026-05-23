@@ -1,3 +1,15 @@
+
+---
+title: TrajCare - DHD Path
+emoji: 🏥
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+app_file: app.py
+pinned: false
+---
+
+
 # Trajectory-Aware AI Decision Support for Dementia Discharge Planning
 
 **Research prototype · Academic dashboard · Synthetic data only**
