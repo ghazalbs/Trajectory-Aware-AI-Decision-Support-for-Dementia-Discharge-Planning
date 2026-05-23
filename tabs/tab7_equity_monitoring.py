@@ -240,7 +240,7 @@ def render_tab7(patients_df: pd.DataFrame, fairness_df: pd.DataFrame):
     )
     if any(c in table_df.columns for c in parity_display_cols):
         avail_parity = [c for c in parity_display_cols if c in table_df.columns]
-     style = style.map(_parity_bg, subset=avail_parity)
+        style = style.map(_parity_bg, subset=avail_parity)
 
     st.markdown(
         '<div style="background:white;border-radius:10px;padding:1.2rem;'
