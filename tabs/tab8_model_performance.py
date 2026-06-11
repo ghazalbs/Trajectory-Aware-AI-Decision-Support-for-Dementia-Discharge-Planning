@@ -10,7 +10,6 @@ import pandas as pd
 import numpy as np
 
 from tabs.shared_components import kpi_card as _kpi_card
-from data_loader import MODEL_DISPLAY
 
 # Ordered display list (for selectbox)
 MODEL_LABEL_ORDER = [

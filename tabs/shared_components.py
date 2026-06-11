@@ -1,14 +1,4 @@
-"""
-tabs/shared_components.py — Shared UI utilities
-─────────────────────────────────────────────────
-Reusable components extracted from tab files so they can be imported
-into any tab without duplication.
-
-Currently extracted from:
-  - tab5_similar_patients  (_kpi_card)
-  - tab6_cohort_monitoring (_kpi_card — identical signature)
-  - tab8_model_performance (_kpi_card — formerly used "border" param name)
-"""
+"""tabs/shared_components.py — Shared UI utilities used across active tabs."""
 
 
 def kpi_card(label: str, value: str, sub: str = "", color: str = "#2b6cb0") -> str:

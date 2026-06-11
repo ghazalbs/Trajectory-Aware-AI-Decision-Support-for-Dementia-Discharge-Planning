@@ -9,8 +9,6 @@ import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
 
-from data_loader import TRAJ_COLORS
-
 # Parity thresholds for flagging disparities
 PARITY_LO = 0.90   # below this → flag (under-performance)
 PARITY_HI = 1.10   # above this → flag (over-performance relative to reference)

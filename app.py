@@ -250,14 +250,8 @@ tab_labels = [
     "📈 Model performance",
 ]
 
-# Hidden tabs (files preserved, not shown in navigation):
-#   tab2_trajectory_profile  — Trajectory Profile
-#   tab5_similar_patients    — Similar Patients
-#   tab6_cohort_monitoring   — Cohort Monitoring
-
 (tab1, tab3, tab4, tab7, tab8) = st.tabs(tab_labels)
 
-# Lazy imports keep startup fast and avoid import-order issues.
 from tabs.tab1_patient_risk      import render_tab1
 from tabs.tab3_explainability    import render_tab3
 from tabs.tab4_decision_support  import render_tab4
