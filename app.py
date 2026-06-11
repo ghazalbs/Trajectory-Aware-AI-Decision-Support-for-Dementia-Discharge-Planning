@@ -35,8 +35,9 @@ from data_loader import load_patients, load_shap, load_threshold_performance, lo
 
 st.markdown("""
 <style>
-/* ── CSS custom properties — light mode defaults ── */
+/* ── Force light mode — overrides OS/browser dark-mode preference ── */
 :root {
+  color-scheme: light;
   --clr-text-primary:   #1a202c;
   --clr-text-secondary: #4a5568;
   --clr-text-muted:     #718096;
@@ -45,18 +46,6 @@ st.markdown("""
   --clr-bg-page:        #f0f4f8;
   --clr-border:         #e2e8f0;
   --clr-border-subtle:  #f0f4f8;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --clr-text-primary:   #e2e8f0;
-    --clr-text-secondary: #a0aec0;
-    --clr-text-muted:     #718096;
-    --clr-bg-primary:     #1e2533;
-    --clr-bg-secondary:   #252d3d;
-    --clr-bg-page:        #171923;
-    --clr-border:         #3d4a5c;
-    --clr-border-subtle:  #2d3748;
-  }
 }
 
 /* ── Typography ── */
