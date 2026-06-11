@@ -243,6 +243,7 @@ st.markdown(f"""
 # ─────────────────────────────────────────────────────────────────────────────
 
 tab_labels = [
+    "👥 Population insights",
     "🧑‍⚕️ Patient risk summary",
     "🔍 Key drivers",
     "📋 Planning support",
@@ -250,16 +251,18 @@ tab_labels = [
     "📈 Model performance",
 ]
 
-(tab1, tab3, tab4, tab7, tab8) = st.tabs(tab_labels)
+(tab_pop, tab1, tab3, tab4, tab7, tab8) = st.tabs(tab_labels)
 
-from tabs.tab1_patient_risk      import render_tab1
-from tabs.tab3_explainability    import render_tab3
-from tabs.tab4_decision_support  import render_tab4
-from tabs.tab7_equity_monitoring import render_tab7
-from tabs.tab8_model_performance import render_tab8
+from tabs.tab_population_insights import render_tab_population_insights
+from tabs.tab1_patient_risk       import render_tab1
+from tabs.tab3_explainability     import render_tab3
+from tabs.tab4_decision_support   import render_tab4
+from tabs.tab7_equity_monitoring  import render_tab7
+from tabs.tab8_model_performance  import render_tab8
 
-with tab1: render_tab1(patients_df)
-with tab3: render_tab3(patients_df, shap_df)
-with tab4: render_tab4(patients_df)
-with tab7: render_tab7(patients_df, fairness_df)
-with tab8: render_tab8(threshold_df)
+with tab_pop: render_tab_population_insights(patients_df)
+with tab1:    render_tab1(patients_df)
+with tab3:    render_tab3(patients_df, shap_df)
+with tab4:    render_tab4(patients_df)
+with tab7:    render_tab7(patients_df, fairness_df)
+with tab8:    render_tab8(threshold_df)
